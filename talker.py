@@ -1,5 +1,7 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
+#python으로 아두이노를 제어하기 위한 퍼블리셔
 import rospy
 from std_msgs.msg import String
 
