@@ -7,14 +7,15 @@ from std_msgs.msg import String
 from std_msgs.msg import Float64
 
 #퍼블리싱되는 토픽 이름:your_topic
+#퍼블리싱하는 노드 이름:py_talker
 
 #데이터를 퍼블리싱하는 부분
 def talker():
       pub = rospy.Publisher('your_topic',Float64,queue_size=10)
       rospy.init_node('py_talker', anonymous = True)
-      rate = rospy.Rate(60) #60hz,default is 10hz
+      rate = rospy.Rate(10) #default is 10hz
       while not rospy.is_shutdown():
-	    test_val=1.234
+	    test_val=11.23
             rospy.loginfo(test_val)
             pub.publish(test_val)
             rate.sleep()

@@ -9,14 +9,12 @@
 
 ros::NodeHandle nh;
 
-float x; 
-
+std_msgs::Float64 test;
 void messageCb( const std_msgs::Float64& msg){
-  x = msg.data;
+  test.data = msg.data;
   digitalWrite(13, HIGH-digitalRead(13));   // blink the led
 }
 
-std_msgs::Float64 test;
 ros::Subscriber<std_msgs::Float64> s("your_topic", &messageCb);
 
 
@@ -29,11 +27,10 @@ void setup()
 
 void loop()
 {
-  test.data = x;
   if (sizeof(test.data)==4)
   {
     Serial.println(test.data);
   }
   nh.spinOnce();
-  delay(10);
+  delay(60);
 }

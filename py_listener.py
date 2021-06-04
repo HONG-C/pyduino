@@ -7,13 +7,13 @@ from std_msgs.msg import String
 from std_msgs.msg import Float64
 
 #서브스크라이빙되는 토픽 이름:my_topic
-
+#서브스크라이버의 이름:listener
 def callback(data):
       rospy.loginfo(rospy.get_caller_id() + "my_topic:%s", data.data)
 
 
 def listener():
-      rospy.init_node('listener',anonymous=True)
+      rospy.init_node('py_listener',anonymous=True)
 
       rospy.Subscriber("my_topic", Float64, callback)
 
