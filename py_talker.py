@@ -5,6 +5,8 @@
 import rospy
 from std_msgs.msg import String
 from std_msgs.msg import Float64
+#float 64형의 경우에는 하위 데이터 data가 있음 
+
 
 #퍼블리싱되는 토픽 이름:your_topic
 #퍼블리싱하는 노드 이름:py_talker
