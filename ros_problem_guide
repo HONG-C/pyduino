@@ -45,6 +45,11 @@ https://happyobo.github.io/ros/%EC%95%84%EB%91%90%EC%9D%B4%EB%85%B8/ros7-post/
 8.아두이노 등 장치 포트인식이 안될 때
 sudo chmod 666 /dev/ttyACM0  
 
+9.ros serial 노드 실행 
+rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=57600
+
+
+
 
 
 
