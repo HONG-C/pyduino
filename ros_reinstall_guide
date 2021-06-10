@@ -1,0 +1,42 @@
+//재설치 시 가이드
+sudo apt-get remove ros-*      (패키지 삭제,설정파일은 남겨둠)
+
+rosversion -d                  (여기에서 <unknown>이라고 뜨면 삭제가 된 것임.) 
+
+//재설치 
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
+sudo apt update
+
+sudo apt install ros-melodic-desktop-full
+
+sudo apt-get install python-pip
+
+sudo pip install -U rosdep
+
+sudo rosdep init
+
+rosdep update
+
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+source /opt/ros/melodic/setup.bash
+
+sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
+
+//여기서부터 차선인식을 위한 라이브러리들 
+sudo apt-get install ros-melodic-ar-track-alvar
+
+sudo apt-get install python-pip
+
+pip2 install pygame==1.9.6
+
+pip2 install pillow==6.2.2
+
+//ros serial을 위한 라이브러리들(아두이노 제어용)
+sudo apt-get install ros-melodic-rosserial-arduino
+
+sudo apt-get install ros-melodic-rosserial
