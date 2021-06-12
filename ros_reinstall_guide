@@ -1,5 +1,5 @@
 //재설치 시 가이드
-sudo apt-get remove ros-*      (패키지 삭제,설정파일은 남겨둠)
+sudo apt-get purge ros-*          (패키지,설정파일 모두 삭제)
 
 rosversion -d                  (여기에서 <unknown>이라고 뜨면 삭제가 된 것임.) 
 
