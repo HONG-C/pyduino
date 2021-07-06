@@ -24,6 +24,10 @@ ros::Subscriber<std_msgs::Float64> s("your_topic", &messageCb);
 
 void setup()
 {
+  //motorA
+  pinMode(12, OUTPUT);//cw,ccw
+  pinMode(3, OUTPUT);//speed
+  pinMode(9, OUTPUT);//brake
   //motorB
   pinMode(13, OUTPUT);//cw,ccw
   pinMode(11, OUTPUT);//speed
@@ -36,7 +40,7 @@ void setup()
 void loop()
 {
   
-  if(test.data==11.23)
+  if(test.data==250)
   {
     Serial.println("ok");
   }
@@ -46,11 +50,13 @@ void loop()
     Serial.println(test.data);
   }
 
-  digitalWrite(13,1);
-  digitalWrite(11,250);
+  digitalWrite(12,1);
+  digitalWrite(3,test.data);
   delay(1000);
-  digitalWrite(13,0);
-  digitalWrite(11,250);
+  
+  digitalWrite(13,1);
+  digitalWrite(11,test.data);
+  delay(1000);
   //function for starting callback function
   //when message is subscribed, start callback function
   nh.spinOnce();
