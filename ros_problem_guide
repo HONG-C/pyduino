@@ -48,14 +48,17 @@ sudo chmod 666 /dev/ttyACM0
 9.ros serial 노드 실행 
 rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=57600
 
-19.특정 노드가 작동이 안될 때
+10.특정 노드가 작동이 안될 때
 ps로 프로레스 pid확인
 kill -9 <프로세스 pid>
 
 11.자신의 ip주소 확인
 hostname -I
 
-
-
+12.cppduino,pyduino 실행 시
+roscore 실행
+퍼블리셔 실행 
+rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=57600
+아두이노 켜고 포트연결 확인 후 시리얼 모니터 창 확인(9번 참조)
 
 
