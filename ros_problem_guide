@@ -61,4 +61,8 @@ roscore 실행
 rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=57600
 아두이노 켜고 포트연결 확인 후 시리얼 모니터 창 확인(9번 참조)
 
+13.파일을 usb등에서 넣어서 실행했는데 작동이 안될 때
+파일 있는 경로까지 cd로 이동 후 
+chmod +x talker.py(파일이름)
+
 
