@@ -18,7 +18,6 @@ from std_msgs.msg import Float64
 
 #퍼블리싱되는 토픽 이름:your_topic
 #데이터를 퍼블리싱하는 부분
-def drive(angle,speed):
       
 def talker():
       pub = rospy.Publisher('your_topic',Float64,queue_size=10)

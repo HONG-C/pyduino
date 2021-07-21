@@ -34,7 +34,7 @@ def talker():
       rospy.init_node('py_talker', anonymous = True)
       rate = rospy.Rate(10) #default is 10hz
       while not rospy.is_shutdown():
-	    drive(30,30)
+	    drive(30,250)
             rate.sleep()
 
 
