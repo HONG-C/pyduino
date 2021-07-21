@@ -13,28 +13,21 @@
 import rospy
 from std_msgs.msg import String
 from std_msgs.msg import Float64
-from pyduino.msg import Drive
 #float 64형의 경우에는 하위 데이터 data가 있음 
-pub=None   #퍼블리셔 선언 
+
 
 #퍼블리싱되는 토픽 이름:your_topic
 #데이터를 퍼블리싱하는 부분
 def drive(angle,speed):
-      global pub
-
-      msg = Drive()
-      msg.angle = angle
-      msg.speed = speed
-      print("steering_angle:",msg.angle,"car_speed",msg.speed)
-      pub.publish(msg)
       
 def talker():
-      global pub
-      pub = rospy.Publisher('your_topic',Drive,queue_size=10)
+      pub = rospy.Publisher('your_topic',Float64,queue_size=10)
       rospy.init_node('py_talker', anonymous = True)
       rate = rospy.Rate(10) #default is 10hz
       while not rospy.is_shutdown():
-	    drive(30,30)
+	    test_val=250
+            rospy.loginfo(test_val)
+            pub.publish(test_val)
             rate.sleep()
 
 
