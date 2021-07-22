@@ -11,6 +11,7 @@
 ####################################################################
 #python으로 아두이노를 제어하기 위한 퍼블리셔
 import rospy
+import time
 from std_msgs.msg import String
 from std_msgs.msg import Float64
 from pyduino.msg import Drive
@@ -21,7 +22,6 @@ pub=None   #퍼블리셔 선언
 #데이터를 퍼블리싱하는 부분
 def drive(angle,speed):
       global pub
-
       msg = Drive()
       msg.angle = angle
       msg.speed = speed
@@ -34,7 +34,10 @@ def talker():
       rospy.init_node('py_talker', anonymous = True)
       rate = rospy.Rate(10) #default is 10hz
       while not rospy.is_shutdown():
+	    
 	    drive(30,250)
+	    time.sleep(0.5)
+	    drive(30,0)
             rate.sleep()
 
 

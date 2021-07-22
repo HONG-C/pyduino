@@ -53,11 +53,11 @@ void loop()
 
   digitalWrite(12,1);
   digitalWrite(3,test.speed);
-  delay(1000);
+  delay(10);
   
-  digitalWrite(13,1);
-  digitalWrite(11,test.speed);
-  delay(1000);
+  //digitalWrite(13,1);
+  //digitalWrite(11,test.speed);
+  //delay(100);
   //function for starting callback function
   //when message is subscribed, start callback function
   nh.spinOnce();
