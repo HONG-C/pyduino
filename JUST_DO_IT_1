@@ -1,5 +1,17 @@
 1.헤더파일 추가하는 법
-https://m.blog.naver.com/nswve/222040768394
+참고 링크:https://m.blog.naver.com/nswve/222040768394
+
+mkdir arduino_header
+
+저장할 폴더 위치 : /home/benlee/msg_temp
+패키지 명 : MoMach_ros
+ex) rosrun rosserial_arduino make_libraries.py /home/benlee/msg_temp MoMach_ros
+
+내가 저장할  폴더 위치: /home/jihun/arduino_header
+내 패키지 명:pyduino
+ex) rosrun rosserial_arduino make_libraries.py /home/jihun/arduino_header pyduino
+
+그 후 arduino_header/roslib/pyduino파일을 압축 후 아두이노 켠 후 좌측 상단 sketch->include library에 들어가서 add zip.library에서 파일 추가 
 
 2.ros::spin,rate.sleep관련 설명
 https://stella47.tistory.com/111
