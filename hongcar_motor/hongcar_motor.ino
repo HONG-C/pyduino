@@ -41,16 +41,8 @@ void setup()
 void loop()
 {
   
-  if(test.speed==250)
-  {
-    Serial.println("ok");
-  }
-  else
-  {
-    Serial.println("not ok");
-    Serial.println(test.speed);
-  }
-
+  Serial.println(test.speed);//check topic
+  Serial.println(test.angle);//check topic
   digitalWrite(12,1);
   digitalWrite(3,test.speed);
   delay(10);
