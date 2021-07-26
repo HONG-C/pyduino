@@ -6,6 +6,10 @@
 #include <ros.h>
 #include <std_msgs/Float64.h>
 #include <Drive.h>
+#include <Servo.h>//include servo headerfile
+
+Servo servo;//using Servo class, make servo object
+
 
 //To communicate with ros system,setting an nodehandle
 ros::NodeHandle nh;
@@ -33,6 +37,7 @@ void setup()
   pinMode(13, OUTPUT);//cw,ccw
   pinMode(11, OUTPUT);//speed
   pinMode(8, OUTPUT);//brake
+  servo.attach(7);
   nh.initNode();
   nh.subscribe(s);
   Serial.begin(57600);
@@ -45,6 +50,7 @@ void loop()
   Serial.println(test.angle);//check topic
   digitalWrite(12,1);
   digitalWrite(3,test.speed);
+  servo.write(test.angle);
   delay(10);
   
   //digitalWrite(13,1);

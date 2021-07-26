@@ -37,7 +37,7 @@ def talker():
 	    
 	    drive(30,250)
 	    time.sleep(0.5)
-	    drive(30,0)
+	    drive(90,0)
             rate.sleep()
 
 
