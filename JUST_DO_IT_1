@@ -15,3 +15,6 @@ ex) rosrun rosserial_arduino make_libraries.py /home/jihun/arduino_header pyduin
 
 2.ros::spin,rate.sleep관련 설명
 https://stella47.tistory.com/111
+
+3.아두이노 모터쉴드 설명(arduino motor shield rev3) 
+https://www.instructables.com/Arduino-Motor-Shield-Tutorial/

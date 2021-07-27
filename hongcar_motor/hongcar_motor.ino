@@ -31,11 +31,9 @@ void setup()
 {
   //motorA
   pinMode(12, OUTPUT);//cw,ccw
-  pinMode(3, OUTPUT);//speed
   pinMode(9, OUTPUT);//brake
   //motorB
   pinMode(13, OUTPUT);//cw,ccw
-  pinMode(11, OUTPUT);//speed
   pinMode(8, OUTPUT);//brake
   servo.attach(7);
   nh.initNode();
@@ -49,15 +47,13 @@ void loop()
   Serial.println(test.speed);//check topic
   Serial.println(test.angle);//check topic
   digitalWrite(12,1);
-  digitalWrite(3,test.speed);
+  digitalWrite(9,0);
+  analogWrite(3,test.speed);
+  digitalWrite(13,0);
+  digitalWrite(8,0);
+  analogWrite(11,test.speed);
   servo.write(test.angle);
-  delay(10);
-  
-  //digitalWrite(13,1);
-  //digitalWrite(11,test.speed);
-  //delay(100);
-  //function for starting callback function
-  //when message is subscribed, start callback function
+  delay(100);
   nh.spinOnce();
   
   delay(60);
