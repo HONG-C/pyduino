@@ -41,6 +41,10 @@ void setup()
   Serial.begin(57600);
 }
 
+void DRIVE()
+{
+  
+}
 void loop()
 {
   
@@ -49,11 +53,14 @@ void loop()
   digitalWrite(12,1);
   digitalWrite(9,0);
   analogWrite(3,test.speed);
+  delay(1000);
+  digitalWrite(9,1);
   digitalWrite(13,0);
   digitalWrite(8,0);
   analogWrite(11,test.speed);
+  delay(1000);
+  digitalWrite(8,1);
   servo.write(test.angle);
-  delay(100);
   nh.spinOnce();
   
   delay(60);

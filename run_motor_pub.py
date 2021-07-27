@@ -36,8 +36,8 @@ def talker():
       while not rospy.is_shutdown():
 	    
 	    drive(30,250)
-	    time.sleep(0.5)
-	    drive(90,0)
+	    #time.sleep(0.5)
+	    #drive(90,0)
             rate.sleep()
 
 
