@@ -65,4 +65,10 @@ rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=57600
 파일 있는 경로까지 cd로 이동 후 
 chmod +x talker.py(파일이름)
 
+15.직렬포트 연결 확인(아두이노 등 연결 때)
+dmesg | grep tty
+
+14.아두이노 처음 연결해서 ros랑 쓸 때
+sudo chmod a+rw /dev/ttyACM0 (포트사용을 위해 모든 유저에게 읽고 쓰는 권한을 줍니다)
+
 
