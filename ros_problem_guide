@@ -70,5 +70,5 @@ dmesg | grep tty
 
 14.아두이노 처음 연결해서 ros랑 쓸 때
 sudo chmod a+rw /dev/ttyACM0 (포트사용을 위해 모든 유저에게 읽고 쓰는 권한을 줍니다)
-
+참고링크: https://95mkr.tistory.com/entry/ROS8
 
