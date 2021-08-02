@@ -30,7 +30,7 @@ def drive(angle,speed):
       
 def talker():
       global pub
-      pub = rospy.Publisher('your_topic',Drive,queue_size=10)
+      pub = rospy.Publisher('motor_topic',Drive,queue_size=10)
       rospy.init_node('run_motor_pub', anonymous = True)
       rate = rospy.Rate(10) #default is 10hz
       while not rospy.is_shutdown():
