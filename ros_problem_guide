@@ -68,16 +68,20 @@ chmod +x talker.py(파일이름)
 15.직렬포트 연결 확인(아두이노 등 연결 때)
 dmesg | grep tty
 
-14.아두이노 처음 연결해서 ros랑 쓸 때
+16.아두이노 처음 연결해서 ros랑 쓸 때
 sudo chmod a+rw /dev/ttyACM0 (포트사용을 위해 모든 유저에게 읽고 쓰는 권한을 줍니다)
 참고링크: https://95mkr.tistory.com/entry/ROS8
 
-15.ar_track_alvar 실습
+17.ar_track_alvar 실습
 roslaunch usb_cam usb_cam-test.launch 
 roslaunch ar_tag_toolbox ar_track_usb_cam.launch 
 rostopic echo /ar_pose_marker
 
 rostopic echo /visualization_marker/id 
+
+18.c++에서 퍼블리싱 서브스크라이빙 같이 하고 싶을 때
+https://m.blog.naver.com/nswve/222089931436
+위 링크 참고 
 
 
 
